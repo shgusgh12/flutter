@@ -9,7 +9,9 @@ class _ShowGridView extends State<ShowGridView>{
   @override
   Widget build(BuildContext context){
     return Container(
-      child: Text('그리드 뷰 화면입니다.'),
+      child: Column(children: [
+        Text('hi'),
+      ],)
 
     );
   }

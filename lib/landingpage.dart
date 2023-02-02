@@ -2,7 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mission1/mainpage.dart';
+import 'package:mission1/mainpages/homescreen.dart';
+import 'package:mission1/mainpages/secondscreen.dart';
 
 class LandingPage extends StatefulWidget{
 
@@ -15,7 +16,7 @@ class _LandingPageState extends State<LandingPage>{
   void initState(){
     //3초후에 메인페이지로 진입하게 해주는 timer
     Timer(Duration(seconds: 3),(){
-       Get.offAll(MainPage());
+       Get.offAll(HomeScreen());
     //  다시 landing페이지로 이동하는것 방지
     });
     super.initState();
