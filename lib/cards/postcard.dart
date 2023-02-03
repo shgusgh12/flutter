@@ -17,6 +17,8 @@ class _PostCardState extends State<PostCard> {
   bool imageLabelChecking = false;
   String imageLabel = "";
   XFile? imageFile;
+  int count = 0;
+  String foodTemp = "";
 
   void getImage(ImageSource source) async {
     try {
@@ -157,7 +159,16 @@ class _PostCardState extends State<PostCard> {
                                 )
                             ),
                             onPressed: () {
+                              count++;
                               getImage(ImageSource.gallery); //카메라도 가능
+                              if(count==1){
+
+                              }else if(count ==2){
+
+                              }else if(count ==3){
+
+                              }else
+                                ;
                             },
 
                             child: Container(
