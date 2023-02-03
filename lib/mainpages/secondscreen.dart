@@ -21,7 +21,7 @@ class _SecondScreen extends State<SecondScreen> {
                     .of(context)
                     .size
                     .width,
-                height: 50,
+                height: 80,
 
                 child: Center(
                   child: Column(
@@ -62,7 +62,15 @@ class _SecondScreen extends State<SecondScreen> {
                             color: Colors.orange,
                             width: 3,
                           )),
-                      child: Image.asset('image/carrot.png'),
+                      child:
+                      Column(
+                        children: [
+                          SizedBox(height: 20,),
+                          Image.asset('images/carrote.png', width: 80, height: 80,),
+                          Text("당근", style: TextStyle(color: Colors.black, fontSize: 20),),
+                        ],
+                      ),
+
 
                   ),
                   SizedBox(
@@ -77,7 +85,13 @@ class _SecondScreen extends State<SecondScreen> {
                           color: Colors.orange,
                           width: 3,
                         )),
-                    //child: Image.asset('image/2.jpg'),
+                    child: Column(
+                      children: [
+                        SizedBox(height: 20,),
+                        Image.asset('images/감자.jpg', width: 80, height: 80,),
+                        Text("감자", style: TextStyle(color: Colors.black, fontSize: 20),),
+                      ],
+                    ),
 
                   ),
                 ],
@@ -100,7 +114,13 @@ class _SecondScreen extends State<SecondScreen> {
                           color: Colors.orange,
                           width: 3,
                         )),
-                    //child: Image.asset('image/2.jpg'),
+                    child: Column(
+                      children: [
+                        SizedBox(height: 20,),
+                        Image.asset('images/양파.png', width: 80, height: 80,),
+                        Text("양파", style: TextStyle(color: Colors.black, fontSize: 20),),
+                      ],
+                    ),
 
                   ),
                   SizedBox(
@@ -115,7 +135,13 @@ class _SecondScreen extends State<SecondScreen> {
                           color: Colors.orange,
                           width: 3,
                         )),
-                    //child: Image.asset('image/2.jpg'),
+                    child: Column(
+                      children: [
+                        SizedBox(height: 20,),
+                        Image.asset('images/meat.png', width: 80, height: 80,),
+                        Text("돼지고기", style: TextStyle(color: Colors.black, fontSize: 20),),
+                      ],
+                    ),
 
                   ),
                 ],
