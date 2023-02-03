@@ -18,7 +18,6 @@ class _PostCardState extends State<PostCard> {
   String imageLabel = "";
   XFile? imageFile;
   int count = 0;
-  String foodTemp = "";
 
   void getImage(ImageSource source) async {
     try {
@@ -127,6 +126,7 @@ class _PostCardState extends State<PostCard> {
                             ),
                             onPressed: () {
                               getImage(ImageSource.camera); //카메라도 가능
+                              count++;
                             },
 
                             child: Container(
@@ -161,14 +161,7 @@ class _PostCardState extends State<PostCard> {
                             onPressed: () {
                               count++;
                               getImage(ImageSource.gallery); //카메라도 가능
-                              if(count==1){
 
-                              }else if(count ==2){
-
-                              }else if(count ==3){
-
-                              }else
-                                ;
                             },
 
                             child: Container(
@@ -212,20 +205,39 @@ class _PostCardState extends State<PostCard> {
                       ),
                     ],
                   )),
-              Container(
-                width: MediaQuery
-                    .of(context)
-                    .size
-                    .width,
-                height: 45,
-                padding: EdgeInsets.symmetric(horizontal: 30),
-                child: TextField(
-                  //textfield 값 받아서 재료3에 넣기
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: '입력하세요',
+              Row(
+                children: [
+                  Container(
+                    width: 320,
+                    height: 45,
+
+                    padding: EdgeInsets.symmetric(horizontal: 30),
+                    child: TextField(
+                      //textfield 값 받아서 재료3에 넣기
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: '입력하세요',
+                      ),
+                    ),
                   ),
-                ),
+                  OutlinedButton(
+                    onPressed: () {
+                      count++;
+                    },
+                    child: Text(
+                      '추가',
+                      style: TextStyle(color: Colors.black),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                        shape: const RoundedRectangleBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(15))),
+                        primary: Colors.orange,
+                        side: BorderSide(
+                          color: Colors.orangeAccent,
+                          width: 3,
+                        )),
+                  ),
+                ],
               ),
               SizedBox(
                 height: 15,
@@ -254,45 +266,60 @@ class _PostCardState extends State<PostCard> {
                     Column(
                       children: [
                         Container(
-                          child: Text(
-                            '돼지고기',
-                            style: TextStyle(
-                              fontSize: 18,
-                            ),
-                          ),
+
+                          child: ((){
+                            if(count >=1)
+                              return const Text('돼지고기', style: TextStyle(
+              fontSize: 18,
+              ),);
+                            else
+                              return const Text('');
+                          }
+                        )(),
+
+
                         ),
                         SizedBox(
                           height: 13,
                         ),
                         Container(
-                          child: Text(
-                            '양파',
-                            style: TextStyle(
-                              fontSize: 18,
-                            ),
-                          ),
+                          child: ((){
+                            if(count >=2)
+                              return const Text('양파', style: TextStyle(
+                                fontSize: 18,
+                              ),);
+                            else
+                              return const Text('');
+                          }
+                          )(),
                         ),
                         SizedBox(
                           height: 13,
                         ),
                         Container(
-                          child: Text(
-                            '감자',
-                            style: TextStyle(
-                              fontSize: 18,
-                            ),
-                          ),
+                          child: ((){
+                            if(count >=3)
+                              return const Text('감자', style: TextStyle(
+                                fontSize: 18,
+                              ),);
+                            else
+                              return const Text('');
+                          }
+                          )(),
                         ),
                         SizedBox(
                           height: 13,
                         ),
                         Container(
-                          child: Text(
-                            '당근',
-                            style: TextStyle(
-                              fontSize: 18,
-                            ),
-                          ),
+                          child: ((){
+                            if(count >=4)
+                              return const Text('당근', style: TextStyle(
+                                fontSize: 18,
+                              ),);
+                            else
+                              return const Text('');
+                          }
+                          )(),
                         ),
                       ],
                     )
