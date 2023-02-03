@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mission1/mainpages/receipe.dart';
+import 'package:mission1/mainpages/thirdscreen.dart';
 
 
 class SecondScreen extends StatefulWidget {
@@ -160,7 +162,7 @@ class _SecondScreen extends State<SecondScreen> {
                       context,
                       MaterialPageRoute(
                           builder: (context) =>
-                              SafeArea(child: SecondScreen())),
+                              SafeArea(child: Receipt())),
                     );
                   },
                   child: Text(
